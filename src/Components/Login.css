@@ -1,14 +1,19 @@
 .formdiv{
-    border: 1px solid black;
+    
     min-height: 50vh;
     width: 20%;
-    margin-top:10% ;
+    margin-top:5% ;
     margin-left: 40%;
     padding: 20px;
-    border-radius: 10%;
+    border-radius: 10%;   
+  border: 2px solid black;
+  outline:#4FC3F7 solid 10px;
+   
+  
+  text-align: center;
 }
 
 h1{
     text-align: center;
-    color: red;
+    
 }

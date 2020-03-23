@@ -1,20 +1,23 @@
 
 import React, { Component } from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import {  Switch, Route } from 'react-router-dom';
 import Login from './Components/Login';
 import Admin from './Components/Admin';
 import Logout from './Components/Logout';
+//import Navbar from './Components/Navbar'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
   render(){
   return (
-    <div className="main">
+    <MuiThemeProvider>
+      
     <Switch>
       <Route exact path="/" component={Login} />
       <Route  path="/admin" component={Admin} />
       <Route  path="/logout" component={Logout} />
     </Switch>
-    </div>
+    </MuiThemeProvider>
   );
 }
 }

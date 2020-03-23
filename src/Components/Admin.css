@@ -1,0 +1,114 @@
+*{
+	padding:0px;
+    margin:0px;	
+}
+
+.bgimg{
+	background-image: url('223shash.jpg');
+	background-size: 100% 150%;
+	width:100%;
+	height:100vh;
+	animation:slider 5s infinite linear;
+	background-attachment:fixed;
+	animation:slider 5s infinite linear;
+	
+}
+@keyframes slider{
+	10%{background-image: url('223shash.jpg');}
+	/*50%{background-image: url('12.jpg');}*/
+	50%{background-image: url('123.jpg');}
+	
+	
+}
+
+
+	
+	
+
+
+
+
+
+.menu{
+	width:100%;
+	height:80px;
+	background-color:rgba(0,0,0,0.5);
+	
+}
+.leftmenu{
+	width:25%;
+	line-height:80px;
+	float:left;
+	
+}
+.leftmenu h4{
+	padding-left:70px;
+	color:white;
+	font-size:30px;
+	font-family: 'Poppins', sans-serif;
+}
+.rightmenu{
+	width:75%;
+	float:right;
+	line-height:80px;
+}
+
+.rightmenu ul{
+	margin-left:200px;
+	
+}
+
+.rightmenu ul li{
+	display:inline-block;
+	font-family: 'Poppins', sans-serif;
+	line-height:100px;
+	margin-left:40px;
+	font-size:20px;
+	color:white;	
+}
+.rightmenu ul li:hover{
+	color:yellow;	
+}
+.text{
+	
+	margin-top:225px;
+	text-align:center;
+	font-family: 'Poppins', sans-serif;
+	color:white;	
+}
+.text h1{
+	font-size:60px;
+	margin:14px 0;
+}
+#one{
+	border:none;
+	line-height:40px;
+	width:150px;
+	font-family: 'Poppins', sans-serif;
+	border:3px solid white;
+	background-color:transparent;
+	font-size:20px;
+	margin-top:25px;
+	color:white;
+		font-weight:bold;
+		
+}
+#two{
+	border:none;
+	line-height:40px;
+	width:150px;
+font-family: 'Poppins', sans-serif;
+	border:3px solid white;
+	background-color:transparent;
+	font-size:20px;
+	color:white;
+	font-weight:bold;
+}
+#two:hover{
+	background-color:white;	
+	color:black;
+}
+#one:hover{
+	background-color:white;	
+	color:black;
+}

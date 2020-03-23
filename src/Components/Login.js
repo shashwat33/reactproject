@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import './Login.css';
-import { Paper } from 'material-ui/Paper'
+import Navbar from './Navbar'
+import TextField from 'material-ui/TextField';
+import {orange500, blue500} from 'material-ui/styles/colors';
+
+//import Paper from 'material-ui/Paper';
+//import Paper1 from './Paper'
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton';
+
+
 
 export default class Login extends Component {
     constructor(props){
@@ -36,31 +46,81 @@ export default class Login extends Component {
             })
         }
     }
+
+     
     render() {
         if(this.state.loggedIn){
             return <Redirect to="/admin" />
         }
+
+       /* const style = {
+           button: { margin: 12
+           }
+          };*/
   
         return (
+ <div>
+                <Navbar />           
+            <div className= "formdiv">   
             
-            <div className= "formdiv">
                 <h1 >LOGIN</h1>
                 <br/>
-                <form onSubmit={this.submitForm}>
-            <input type="text" placeholder="username" name="username" value={this.state.username} onChange={this.onChange} />
+                <br/>
+                <form >
+            
+            <TextField
+      hintText="Enter Your Username here"
+      floatingLabelText="Username"
+      underlineStyle={styles.underlineStyle}
+      name="username" value={this.state.username} onChange={this.onChange}
+    />
+                <br/>               
+                <br/>
+                
+                <TextField
+      hintText="password"
+      floatingLabelText="Enter Password"
+      type="password"
+      name="password" value={this.state.password} onChange={this.onChange}
+      underlineStyle={styles.underlineStyle}
+      
+    />
                 <br/>
                 <br/>
                 <br/>
-                <input type="password" placeholder="password" name="password" value={this.state.password} onChange={this.onChange} />
-                <br/>
-                <br/>
-                <br/>
-                <input type="Submit"  />
+                
+                <RaisedButton label="Submit" primary={true} name="Submit" onClick={this.submitForm} />                
                 <br/>  
                 </form>
+                
+                
             </div>
+    
+ </div>
             
         )
     }
 }
+//const styles = {
+   // button: { 
+       // margin: 12
+   // }
+ //  }
+/* const style = {
+    height: 500,
+    width: 350,
+    margin:20,
+    textAlign: 'center',
+    display: 'inline-block',
+  };*/
+  const styles = {
+    errorStyle: {
+      color: blue500,
+    },
+    underlineStyle: {
+      borderColor: blue500,
+    },
+    
+  };
+  
 
